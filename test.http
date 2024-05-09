@@ -1,0 +1,35 @@
+POST http://localhost:4004/odata/v4/studentsrv/StudentInfo
+Content-Type: application/json
+
+{
+    "firstName" : "Test2",
+    "lastName" : "test2",
+    "address" : "Delhi",
+    "department" : "Developer"
+}
+
+###
+GET http://localhost:4004/odata/v4/studentsrv/StudentInfo
+
+###
+GET http://localhost:4004/odata/v4/studentsrv/StudentInfo/1
+
+###
+PUT http://localhost:4004/odata/v4/studentsrv/StudentInfo/1
+Content-Type: application/json
+
+{
+    "firstName" : "Updated Test",
+    "lastName" : "LastName Updated",
+    "address": "Mumbai",
+    "department": "Developer"
+}
+
+###
+PATCH http://localhost:4004/odata/v4/studentsrv/StudentInfo/bfaf5b52-6b9d-4c27-9136-feefdb54fa20
+Content-Type: application/json
+
+{
+    "address": "Mumbai",
+    "department": "UI Designer"
+}

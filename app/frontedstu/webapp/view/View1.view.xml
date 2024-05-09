@@ -1,0 +1,57 @@
+<mvc:View controllerName="com.ingex.frontedstu.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <HBox >
+            <Button text="Add Record" press="onPressAdd"></Button>
+        </HBox>
+        <FlexBox class="TableContainer">
+            <Table id="StudentTable" items="{/StudentInfo}">
+                <columns >
+                    <Column >
+                        <Label text="ID"></Label>
+                    </Column>
+                    <Column >
+                        <Label text="FirstName"></Label>
+                    </Column>
+                    <Column >
+                        <Label text="LastName"></Label>
+                    </Column>
+                    <Column >
+                        <Label text="Address"></Label>
+                    </Column>
+                    <Column >
+                        <Label text="Department"></Label>
+                    </Column>
+                    <Column>
+                        <Label text=""></Label> <!-- Add an empty column for action buttons -->
+                    </Column>
+                </columns>
+                <ColumnListItem >
+                    <cells>
+                        <Text text="{ID}" ></Text>
+                    </cells>
+                    <cells>
+                        <Input value="{firstName}" editable="false"></Input>
+                    </cells>
+                    <cells>
+                        <Input value="{lastName}" editable="false"></Input>
+                    </cells>
+                    <cells>
+                        <Input value="{address}" editable="false"></Input>
+                    </cells>
+                    <cells>
+                       <Input value="{department}" editable="false"></Input>
+                    </cells>
+                    <cells>
+                        
+                        <HBox justifyContent="Center" alignItems="Stretch">
+                            <Button icon="sap-icon://edit" press="onUpdateRecordPress" class="sapUiSmallMarginLeft"></Button>
+                            <Button icon="sap-icon://delete" press="onDeleteRecordPress"></Button>
+                        </HBox>
+                    </cells>
+                </ColumnListItem>
+            </Table>
+        </FlexBox>
+    </Page>
+</mvc:View>

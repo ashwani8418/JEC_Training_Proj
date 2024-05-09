@@ -1,0 +1,27 @@
+{
+  "name": "studentrecord",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7.9.0",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
+    "express": "^4",
+    "@sap/cds-hana": "^2"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1.7.0",
+    "@sap/ux-specification": "^1.120.9"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-frontedstu": "cds watch --open frontedstu/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "db": "hana"
+    }
+  }
+}

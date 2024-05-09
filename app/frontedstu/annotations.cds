@@ -1,0 +1,1 @@
+using studentsrv as service from '../../srv/service';
