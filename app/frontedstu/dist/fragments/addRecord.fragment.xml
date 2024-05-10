@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns:form="sap.ui.layout.form" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog title="Update Student Record">
+        <content>
+            <form:SimpleForm >
+                <form:content>
+                    <Label text="ID" />
+                    <Input id="StdID" value="{updateModel>/ID}" editable="false" />
+                    <Label text="First Name" />
+                    <Input id="inputFirstName" value="{updateModel>/firstName}"/>
+                    <Label text="Last Name" />
+                    <Input id="inputLastName" value="{updateModel>/lastName}"/>
+                    <Label text="Address" />
+                    <Input id="inputAddress" value="{updateModel>/address}" />
+                    <Label text="Department" />
+                    <Input id="inputDepartment" value="{updateModel>/department}" />
+                </form:content>
+            </form:SimpleForm>
+        </content>
+        <beginButton>
+            <Button text="Save" press="onUpdateSave"  type="Success"/>
+        </beginButton>
+        <endButton>
+            <Button text="Cancel" press="onCancel" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
